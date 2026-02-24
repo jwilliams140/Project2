@@ -1,7 +1,7 @@
-import "./NavbarStyles.css"
+import "./NavbarStyles.css";
 
-import React from 'react'
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,42 +9,43 @@ const Navbar = () => {
         <Link to="/">
           <h1>Joshua Williams' Portfolio</h1>
         </Link>
-        <u1>
+        <ul>
             <li>
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
             </li>
 
             <li>
-                <Link to="/">About</Link>
+                <Link to="/about">About</Link>
             </li>
 
             <li>
-                <Link to="/">Resume</Link>
+                <Link to="/resume">Resume</Link>
             </li>
 
             <li>
-                <Link to="/">Portfolio</Link>
+                <Link to="/portfolio">Portfolio</Link>
             </li>
 
             <li>
-                <Link to="/">Project</Link>
+                <Link to="/project">Project</Link>
             </li>
 
             <li>
-                <Link to="/">Blog</Link>
+                <Link to="/blog">Blog</Link>
             </li>
 
             <li>
-                <Link to="/">Posts</Link>
+                <Link to="/posts">Posts</Link>
             </li>
-            
+
             <li>
-                <Link to="/">Contact</Link>
+                <Link to="/contact">Contact</Link>
             </li>
-        </u1>
+        </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar
+
 
