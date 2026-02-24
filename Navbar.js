@@ -13,9 +13,38 @@ const Navbar = () => {
             <li>
                 <Link to="/">Home</Link>
             </li>
+
+            <li>
+                <Link to="/">About</Link>
+            </li>
+
+            <li>
+                <Link to="/">Resume</Link>
+            </li>
+
+            <li>
+                <Link to="/">Portfolio</Link>
+            </li>
+
+            <li>
+                <Link to="/">Project</Link>
+            </li>
+
+            <li>
+                <Link to="/">Blog</Link>
+            </li>
+
+            <li>
+                <Link to="/">Posts</Link>
+            </li>
+            
+            <li>
+                <Link to="/">Contact</Link>
+            </li>
         </u1>
     </div>
   )
 }
 
 export default Navbar
+
