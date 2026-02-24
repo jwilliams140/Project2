@@ -9,6 +9,11 @@ const Navbar = () => {
         <Link to="/">
           <h1>Joshua Williams' Portfolio</h1>
         </Link>
+        <u1>
+            <li>
+                <Link to="/">Home</Link>
+            </li>
+        </u1>
     </div>
   )
 }
