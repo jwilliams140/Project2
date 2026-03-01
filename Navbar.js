@@ -3,6 +3,8 @@ import "./NavbarStyles.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { FaBars } from "react-icons/fa";
+
 const Navbar = () => {
   return (
     <div className="header">
@@ -42,11 +44,16 @@ const Navbar = () => {
                 <Link to="/contact">Contact</Link>
             </li>
         </ul>
+        <div className = "hamburger">
+            <FaBars size = {20} style = {{color: "#1F51FF"}
+        }/>
+        </div>
     </div>
   );
 };
 
 export default Navbar
+
 
 
 
