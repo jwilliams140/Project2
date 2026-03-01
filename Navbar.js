@@ -47,7 +47,8 @@ const Navbar = () => {
                 <Link to="/contact">Contact</Link>
             </li>
         </ul>
-        <div className = "hamburger">
+        <div className = "hamburger" onClick =
+        {handleClick}>
             {click ? (
                 <FaTimes size = {20} style = {{color: 
                 "#1F51FF"}} /> 
@@ -61,6 +62,7 @@ const Navbar = () => {
 };
 
 export default Navbar
+
 
 
 
