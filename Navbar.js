@@ -48,16 +48,20 @@ const Navbar = () => {
             </li>
         </ul>
         <div className = "hamburger">
-            <FaTimes size = {20} style = {{color: "#1F51FF"}
-        }/>
-            <FaBars size = {20} style = {{color: "#1F51FF"}
-        }/>
+            {click ? (
+                <FaTimes size = {20} style = {{color: 
+                "#1F51FF"}} /> 
+                ) : ( 
+                <FaBars size = {20} style = {{color: 
+                "#1F51FF"}} />
+            )}
         </div>
     </div>
   );
 };
 
 export default Navbar
+
 
 
 
