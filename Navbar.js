@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link to="/">
           <h1>Joshua Williams' Portfolio</h1>
         </Link>
-        <ul className="nav-menu">
+        <ul className={click ? "nav-menu.active" : "nav-menu"}>
             <li>
                 <Link to="/home">Home</Link>
             </li>
@@ -62,7 +62,6 @@ const Navbar = () => {
 };
 
 export default Navbar
-
 
 
 
