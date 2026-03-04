@@ -12,9 +12,9 @@ const Navbar = () => {
     return (
     <div className="header">
         <Link to="/">
-          <h1>Joshua Williams' Portfolio</h1>
+          <h1>JW</h1>
         </Link>
-        <ul className={click ? "nav-menu.active" : "nav-menu"}>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li>
                 <Link to="/home">Home</Link>
             </li>
@@ -62,6 +62,7 @@ const Navbar = () => {
 };
 
 export default Navbar
+
 
 
 
