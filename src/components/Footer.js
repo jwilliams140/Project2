@@ -8,7 +8,8 @@ const Footer = () => {
         <div className = "footer-cotainer">
             <div className = "left">
                 <div className = "location">
-                    <FaSchool />
+                    <FaSchool size = {20} style = {{ color:
+                    "#fff", marginRight: "2rem" }} />
                 </div>
             </div>
 
@@ -19,4 +20,5 @@ const Footer = () => {
 }
 
 export default Footer
+
 
