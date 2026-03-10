@@ -5,14 +5,14 @@ import { FaSchool, FaPhone, FaMailBulk, FaLinkedin, FaGithub } from "react-icons
 const Footer = () => {
   return (
     <div className = "footer">
-        <div className = "footer-cotainer">
+        <div className = "footer-container">
             <div className = "left">
                 <div className = "location">
                     <FaSchool size = {20} style = {{ color:
                     "#fff", marginRight: "2rem" }} />
                     <div>
                         <p> CSUB Antelope Valley </p>
-                        <p> 43909 30th Street West, Lancaster, CA 93536 </p>
+                        <p> 43909 30th Street West</p>
                     </div>
                 </div>
                 <div className = "phone"> 
@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
             <div className = "right"></div>
             <h4> About Me </h4>
-            <p> I am a computer science student who enjoys hardware based concepts. </p>
+            <p> I am a CS student who enjoys hardware concepts </p>
             <div className = "social"> 
                     <FaLinkedin 
                     size = {20} 
@@ -51,6 +51,7 @@ const Footer = () => {
 }
 
 export default Footer
+
 
 
 
