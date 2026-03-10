@@ -30,9 +30,12 @@ const Footer = () => {
                     </h4>
                 </div>
             </div>
-            <div className = "right"></div>
+            <div className = "right">
             <h4> About Me </h4>
-            <p> I am a CS student who enjoys hardware concepts </p>
+            <p> 
+                Hello, My name is Joshua Williams. A Computer Science student who enjoys learning and acquiring 
+                hardware skills in troubleshooting, IoT, and assembly language 
+            </p>
             <div className = "social"> 
                     <FaLinkedin 
                     size = {20} 
@@ -44,6 +47,7 @@ const Footer = () => {
                     style = {{ color: "#fff", marginRight: 
                         "2rem" }} 
                     />
+                    </div>
             </div>
         </div>
     </div>
