@@ -26,3 +26,19 @@
     justify-content: center;
     align-items: center;
 }
+
+.hero-img h1 {
+    font-size: 2.4rem;
+}
+
+.hero-img p {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    .hero-img h1{
+        font-size: 2rem;
+    }
+}
+
