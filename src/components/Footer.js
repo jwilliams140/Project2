@@ -1,6 +1,6 @@
 import "./FooterStyles.css";
 import React from "react";
-import { FaSchool } from "react-icons/fa";
+import { FaSchool, FaPhone, FaMailBulk } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -10,6 +10,20 @@ const Footer = () => {
                 <div className = "location">
                     <FaSchool size = {20} style = {{ color:
                     "#fff", marginRight: "2rem" }} />
+                    <div>
+                        <p> CSUB Antelope Valley </p>
+                        <p> 43909 30th Street West, Lancaster, CA 93536 </p>
+                    </div>
+                </div>
+                <div className = "phone"> 
+                    <h4> <FaPhone size = {20} style = {{ color:
+                    "#fff", marginRight: "2rem" }} />
+                    (661) 952-5000 </h4>
+                </div>
+                <div className = "email"> 
+                    <h4> <FaMailBulk size = {20} style = {{ color:
+                    "#fff", marginRight: "2rem" }} />
+                    jwilliams140@csub.edu </h4>
                 </div>
             </div>
 
