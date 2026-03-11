@@ -7,10 +7,11 @@ const Project = () => {
   return (
     <div>
       <Navbar/>
-      <HeroImg2 heading = "PROJECTS." text = "My 4 Projects"/>
+      <HeroImg2 heading = "PROJECTS"/>
       <Footer/>
     </div>
   )
 }
 
 export default Project
+
