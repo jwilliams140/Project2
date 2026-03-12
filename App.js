@@ -6,9 +6,8 @@ import Resume from "./routes/Resume";
 import Portfolio from "./routes/Portfolio";
 import Project from "./routes/Project";
 import Blog from "./routes/Blog";
-import Posts from "./routes/Posts";
+import BlogPost from "./routes/BlogPost";
 import Contact from "./routes/Contact";
-
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -19,9 +18,9 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/resume" element={<Resume />} />
       <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/project" element={<Project />} />
+      <Route path="/portfolio/:slug" element={<Project />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/posts" element={<Posts />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/contact" element={<Contact />} />
      </Routes>
     
