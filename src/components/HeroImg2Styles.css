@@ -130,6 +130,22 @@
   color: #fff;
 }
 
+.project-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.project-detail ul li {
+  display: inline-block;
+  background-color: #1F51FF;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
 @media screen and (max-width: 640px) {
     .hero-img h1{
         font-size: 2rem;
@@ -148,6 +164,7 @@
         margin: 40px auto;
     }
 }
+
 
 
 
