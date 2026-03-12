@@ -29,11 +29,14 @@
 
 .hero-img h1 {
     font-size: 2.4rem;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
 .hero-img p {
     font-size: 1.4rem;
     text-align: center;
+    color: #fff;
 }
 
 .portfolio-container {
@@ -43,17 +46,24 @@
   padding: 2rem;
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   justify-items: center;
 }
 
 .project-card {
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   text-align: center;
   padding: 1.5rem;
   background-color: #111;
-  border-radius: 10px;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .project-card h2,
@@ -72,13 +82,72 @@
   width: 100%;
   max-width: 350px;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 1rem auto;
+  border-radius: 8px;
+}
+
+.project-detail {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.project-detail img {
+  max-width: 450px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1F51FF;
+}
+
+.project-detail p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.project-detail a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #1F51FF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid #1F51FF;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.project-detail a:hover {
+  background-color: #1F51FF;
+  color: #fff;
 }
 
 @media screen and (max-width: 640px) {
     .hero-img h1{
         font-size: 2rem;
     }
+
+    .hero-img p {
+        font-size: 1.2rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .project-detail {
+        padding: 20px;
+        margin: 40px auto;
+    }
 }
+
 
 
