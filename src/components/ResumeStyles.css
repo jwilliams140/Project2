@@ -1,0 +1,28 @@
+.resume-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 2rem;
+}
+
+.resume-container section {
+  margin-bottom: 30px;
+}
+
+.resume-container h2 {
+  color: #1F51FF;
+  margin-bottom: 10px;
+}
+
+.resume-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-container ul li {
+  display: inline-block;
+  background-color: #1F51FF;
+  color: white;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 6px;
+}
