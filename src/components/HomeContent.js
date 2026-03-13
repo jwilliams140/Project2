@@ -19,8 +19,8 @@ const HomeContent = () => {
       </p>
 
       <div className="cta-buttons">
-        <Link to="/portfolio" className="btn">View Portfolio</Link>
-        <Link to="/contact" className="btn btn-light">Contact Me</Link>
+        <Link to="/portfolio" className="btn">Portfolio</Link>
+        <Link to="/contact" className="btn btn-light">Contact</Link>
       </div>
 
     </div>
