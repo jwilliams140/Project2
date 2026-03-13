@@ -36,23 +36,26 @@ const Resume = () => {
         <section>
           <h2>Education</h2>
           <p>
-            Coursework towards Associate's Degree 
+            Coursework towards Associate's Degree < br/>
             Antelope Valley College (Attempted)
+          </p>
+          <br />
 
-            Bachelor of Science in Computer Science  
+          <p>
+            Bachelor of Science in Computer Science
             California State University, Bakersfield (In Progress)
           </p>
-        </section>
 
+        </section>
         <section>
           <h2>Experience</h2>
-
-          <h3>Portfolio Website/App</h3>
+          <h3>Portfolio Website/App</h3> 
           <p>
             Created a portfolio, pokemon search, and introduction app using React with dynamic routing,
             structured project data, and reusable components for application
             development class
-          </p>
+          </p> < br />
+          <br/>
 
           <h3>Blog</h3>
           <p>
@@ -70,4 +73,5 @@ const Resume = () => {
 };
 
 export default Resume;
+
 
