@@ -13,6 +13,11 @@
   margin-bottom: 10px;
 }
 
+.resume-container h3 {
+  color: #1F51FF;
+  margin-bottom: 10px;
+}
+
 .resume-container ul {
   list-style: none;
   padding: 0;
