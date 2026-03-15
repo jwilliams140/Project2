@@ -29,6 +29,7 @@
 
 .location p{
     line-height: 30px;
+    color: rgb(12, 95, 211);
 }
 
 .right {
@@ -46,10 +47,12 @@
 .footer h4 {
     font-size: 1.2rem;
     padding-bottom: 0.7rem;
+    color: rgb(12, 95, 211);
 }
 
 .footer p {
     font-size: 1.2rem;
+    color: rgb(12, 95, 211);
 }
 
 @media screen and (max-width: 640px) {
@@ -63,6 +66,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.8rem;
+    color: rgb(12, 95, 211);
 }
 
 .left, .right {
