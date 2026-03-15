@@ -38,10 +38,10 @@ const Project = () => {
         <Link
           to="/portfolio"
           style={{
-            color: "#1F51FF",
+            color: "rgb(255, 255, 255)",
             textDecoration: "none",
             fontWeight: "bold",
-            border: "1px solid #1F51FF",
+            border: "1px solid rgb(255, 255, 255)",
             borderRadius: "6px",
             padding: "0.5rem 1rem",
             transition: "all 0.2s",
