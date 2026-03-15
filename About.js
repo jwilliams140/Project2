@@ -28,15 +28,17 @@ const About = () => {
           <strong>Years of Experience:</strong> 2+ years developing projects
           and coursework in computer science coursework through college/univeristy.
         </p>
+        <br />
 
         <section>
           <h2>Specializations</h2>
           <ul>
             <li>IT Support</li>
-            <li>React Applications</li>
-            <li>Responsive Web Design</li>
+            <li>Application Developer</li>
+            <li>Web Designer</li>
           </ul>
         </section>
+        <br />
 
         <section>
           <h2>Skills Overview</h2>
@@ -50,6 +52,7 @@ const About = () => {
             <li>Python</li>
           </ul>
         </section>
+        <br />
 
         <a
           href={resume}
