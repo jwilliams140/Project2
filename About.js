@@ -11,7 +11,7 @@ const About = () => {
     <div>
       <Navbar />
 
-      <HeroImg2 heading="ABOUT ME" />
+      <HeroImg2 heading="ABOUT" />
 
       <div className="about-container">
 
@@ -20,36 +20,41 @@ const About = () => {
         <h1>Joshua Williams</h1>
 
         <p className="about-description">
-            I am a current CSUB student majoring in Computer Science.
-            My goal is to obtain a bachelor's degree and pursue the IT Support Field.
+            Since high school I have taken the necessary steps to acquire skills through computer science.
+            My experience first started with computer troubleshooting during my junior and senior year in high school.
+            In college, I first majored in computer networking but I felt the program wasn't set up to help students
+            succeed learning computer hardware. I switched to being a computer engineering student and started to 
+            learn what I've mostly been doing the last few years. Now as a computer science, I am more confident in
+            my ability to showcase my experience through this portfolio.
         </p>
 
         <p>
-          <strong>Years of Experience:</strong> 2+ years developing projects
-          and coursework in computer science coursework through college/univeristy.
+          <strong>Years of Experience:</strong> 2+ years deveoping projects using coding and web development tools.
         </p>
         <br />
 
         <section>
           <h2>Specializations</h2>
           <ul>
-            <li>IT Support</li>
-            <li>Application Developer</li>
-            <li>Web Designer</li>
+            <li>IT Support Specialist</li>
+            <li>Software Engineer</li>
+            <li>Front-End Developer</li>
+            <li>Embedded Software Engineer</li>
           </ul>
         </section>
         <br />
 
         <section>
-          <h2>Skills Overview</h2>
+          <h2>Skills</h2>
           <ul>
             <li>Computer Troubleshooting</li>
             <li>Java</li>
             <li>React</li>
-            <li>Git / GitHub</li>
+            <li>GitHub</li>
             <li>Assembly Language</li>
             <li>IoT</li>
             <li>Python</li>
+            <li>MIPS</li>
           </ul>
         </section>
         <br />
