@@ -16,21 +16,23 @@ const Resume = () => {
         <section>
           <h2>Professional Summary</h2>
           <p>
-            Motivated univeristy student with experience in computer troubleshooting, creating programs
-            from different programming languages, and building applications through React. Passionate
-            about learning new tools and taking on a leadership role when collaborating with others.
+            Motivated university student with experience in computer troubleshooting, coding, and web design. Has spent the last few years acquiring
+            skills through education and demonstrating them through personal and professional projects. Passionate about learning new concepts 
+            and moving up to a leadership role in a professional environment.
           </p>
         </section>
 
         <section>
           <h2>Technical Skills</h2>
           <ul>
-            <li>Java</li>
-            <li>Assembly Language</li>
             <li>Computer Troubleshooting</li>
+            <li>Java</li>
             <li>React</li>
+            <li>GitHub</li>
+            <li>Assembly Language</li>
             <li>Embedded Systems (IoT)</li>
             <li>Python</li>
+            <li>MIPS</li>
           </ul>
         </section>
 
@@ -51,18 +53,33 @@ const Resume = () => {
         </section>
         <section>
           <h2>Experience</h2>
-          <h3>Portfolio Website/App</h3> 
+          < br />
+          <h2>Computer Networking Student</h2>
+          <h2>Antelope Valley College (August 2020 - December 2020)</h2>
+          < br />
+
+          <h3>Computer Troubleshooting</h3> 
           <p>
-            Created a portfolio, pokemon search, and introduction app using React with dynamic routing,
-            structured project data, and reusable components for application
-            development class
+            Simulated common computer troubleshooting problems through hands-on labs in Windows & Linux virtual machines and collaborated 
+            with a peer to present a mock network server.
           </p> < br />
           <br/>
 
-          <h3>Blog</h3>
+          <h2>Computer Science Student</h2>
+          <h2>California State University, Bakersfield (Janaury 2021 -)</h2>
+          < br />
+          <h3>Programming Languages</h3>
+
           <p>
-            Created a blog using React Router with dynamic slug
-            routing and posts stored in structured data files.
+            Individually developed projects using different programming languages (Java, Assembly Language, C++) and 
+            collaborated with other peers to develop projects under a strict deadline. 
+          </p> < br />
+          < br />
+
+          <h3>React Development</h3>
+          <p>
+            Developed projects that included creating an introduction app with a peer, implementing a Pokemon search, 
+            and creating a portfolio all using react development tools.
           </p>
 
         </section>
