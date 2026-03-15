@@ -9,12 +9,12 @@
 }
 
 .resume-container h2 {
-  color: #1F51FF;
+  color: rgb(12, 95, 211);;
   margin-bottom: 10px;
 }
 
 .resume-container h3 {
-  color: #1F51FF;
+  color: rgb(12, 95, 211);;
   margin-bottom: 10px;
 }
 
@@ -25,7 +25,7 @@
 
 .resume-container ul li {
   display: inline-block;
-  background-color: #1F51FF;
+  background-color: rgb(12, 95, 211);;
   color: white;
   padding: 6px 12px;
   margin: 5px;
