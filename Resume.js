@@ -30,6 +30,7 @@ const Resume = () => {
             <li>Computer Troubleshooting</li>
             <li>React</li>
             <li>Embedded Systems (IoT)</li>
+            <li>Python</li>
           </ul>
         </section>
 
@@ -42,9 +43,10 @@ const Resume = () => {
           <br />
 
           <p>
-            Bachelor of Science in Computer Science
+            Bachelor of Science in Computer Science <br />
             California State University, Bakersfield (In Progress)
           </p>
+          <br />
 
         </section>
         <section>
