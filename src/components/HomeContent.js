@@ -11,11 +11,11 @@ const HomeContent = () => {
 
       <h1>Joshua Williams</h1>
 
-      <h2>University Student</h2>
+      <h2>Student</h2>
 
       <p>
-        I am a current CSUB student majoring in Computer Science.
-        My goal is to obtain a bachelor's degree and pursue the IT Support Field.
+        Welcome to my portfolio! Use the above links to access my about, resume, and blog pages.
+        If you would like to view my portfolio or contact me, click the portfolio or contact button.
       </p>
 
       <div className="cta-buttons">
