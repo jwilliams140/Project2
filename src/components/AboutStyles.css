@@ -1,0 +1,63 @@
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+  color: rgb(12, 95, 211);
+}
+
+.about-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-container ul li {
+  display: inline-block;
+  background-color: rgb(12, 95, 211);
+  color: white;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 6px;
+}
+h1 {
+  color: rgb(12, 95, 211);
+}
+
+h2 {
+  color: rgb(12, 95, 211);
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+p {
+  color: rgb(12, 95, 211);
+}
+
+.resume-download {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: rgb(12, 95, 211);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid rgb(255, 255, 255);
+}
