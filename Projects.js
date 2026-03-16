@@ -16,7 +16,7 @@ export const projects = [
   {
     slug: "iot-project2",
     title: "IoT Piano Implementation",
-    description: "An embedded system project to display how IoT helps industries but can also help musically too.",
+    description: "An embedded system project displaying how IoT can help musically and not just industry-wise.",
     image: Piano,
     tech: ["Arduino IDE", "Wokwi", "ESP32"],
   },
