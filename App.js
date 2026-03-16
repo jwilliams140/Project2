@@ -9,10 +9,14 @@ import Blog from "./routes/Blog";
 import BlogPost from "./routes/BlogPost";
 import Contact from "./routes/Contact";
 import { Route, Routes } from "react-router-dom";
+import GrainientBackground from "./components/GrainientBackground";
 
 function App() {
   return (
     <>
+
+    <GrainientBackground />
+    
      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
