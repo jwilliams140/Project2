@@ -10,13 +10,15 @@ import BlogPost from "./routes/BlogPost";
 import Contact from "./routes/Contact";
 import { Route, Routes } from "react-router-dom";
 import GrainientBackground from "./components/GrainientBackground";
+import ClickSpark from "./components/ClickSpark";
 
 function App() {
   return (
     <>
 
     <GrainientBackground />
-    
+    <ClickSpark />
+
      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
