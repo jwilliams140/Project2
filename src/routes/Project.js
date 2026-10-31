@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { projects } from "./Projects";
+import { projects } from "../data/Projects";
+import "./ProjectStyles.css";
 
 const Project = () => {
   const { slug } = useParams();
@@ -55,6 +56,3 @@ const Project = () => {
 };
 
 export default Project;
-
-
-

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HeroImg2 from "../components/HeroImg2";
+import Banner from "../components/Banner";
 import "../components/ContactStyles.css";
 
 const Contact = () => {
@@ -9,7 +9,7 @@ const Contact = () => {
     <div>
       <Navbar />
 
-      <HeroImg2 heading="CONTACT" />
+      <Banner heading="CONTACT" />
 
       <div className="contact-container">
 

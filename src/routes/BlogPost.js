@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { posts } from "./Posts";
+import { posts } from "../data/Posts";
+import "./BlogPostStyles.css";
 
 const BlogPost = () => {
 

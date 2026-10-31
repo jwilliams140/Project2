@@ -2,15 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HeroImg2 from "../components/HeroImg2";
-import { posts } from "../routes/Posts";
+import Banner from "../components/Banner";
+import { posts } from "../data/Posts";
+import "./BlogStyles.css";
 
 const Blog = () => {
   return (
     <div>
       <Navbar />
 
-      <HeroImg2 heading="BLOG" />
+      <Banner heading="BLOG" />
 
       <div className="blog-container">
 
@@ -38,4 +39,3 @@ const Blog = () => {
 };
 
 export default Blog;
-

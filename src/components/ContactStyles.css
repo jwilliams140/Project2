@@ -47,10 +47,10 @@
   background-color: rgb(12, 95, 211);
 }
 
-h2 {
-color: rgb(12, 95, 211);
+.contact-container h2 {
+  color: rgb(12, 95, 211);
 }
 
-p {
+.contact-container p {
   color: rgb(12, 95, 211);
 }

@@ -1,15 +1,16 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HeroImg2 from "../components/HeroImg2";
-import { projects } from "./Projects";
+import Banner from "../components/Banner";
+import { projects } from "../data/Projects";
 import { Link } from "react-router-dom";
+import "./PortfolioStyles.css";
 
 const Portfolio = () => {
   return (
     <div>
       <Navbar />
-      <HeroImg2 heading="PORTFOLIO"/>
+      <Banner heading="PORTFOLIO"/>
 
       <div className="portfolio-container">
 
@@ -52,4 +53,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-

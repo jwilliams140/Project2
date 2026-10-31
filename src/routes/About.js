@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HeroImg2 from "../components/HeroImg2";
+import Banner from "../components/Banner";
 import "../components/AboutStyles.css";
 import profile from "../assets/Profile.jpg"
 import resume from "../assets/resume.pdf";
@@ -11,7 +11,7 @@ const About = () => {
     <div>
       <Navbar />
 
-      <HeroImg2 heading="ABOUT" />
+      <Banner heading="ABOUT" />
 
       <div className="about-container">
 

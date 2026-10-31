@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HeroImg2 from "../components/HeroImg2";
+import Banner from "../components/Banner";
 import "../components/ResumeStyles.css";
 
 const Resume = () => {
@@ -9,7 +9,7 @@ const Resume = () => {
     <div>
       <Navbar />
 
-      <HeroImg2 heading="RESUME" />
+      <Banner heading="RESUME" />
 
       <div className="resume-container">
 
@@ -92,5 +92,3 @@ const Resume = () => {
 };
 
 export default Resume;
-
-

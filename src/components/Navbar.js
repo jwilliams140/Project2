@@ -1,62 +1,61 @@
 import "./NavbarStyles.css";
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-    const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-    const [color, setColor] = useState(false);
+  const [click, setClick] = useState(false);
+  const [color, setColor] = useState(false);
+
+  const handleClick = () => {
+    setClick(!click);
+  };
+
+  useEffect(() => {
     const changeColor = () => {
-        if(window.scrollY >= 100) {
-            setColor(true);
-        }else {
-            setColor(false);
-        }
+      if (window.scrollY >= 100) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
     };
 
     window.addEventListener("scroll", changeColor);
 
-    return (
-    <div className = {color ? "header header-bg": 
-    "header"}>
-        <Link to="/">
-          <h1>JW</h1>
-        </Link>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
 
-            <li>
-                <Link to="/about">About</Link>
-            </li>
+  return (
+    <div className={color ? "header header-bg" : "header"}>
+      <Link to="/">
+        <h1>JW</h1>
+      </Link>
 
-            <li>
-                <Link to="/resume">Resume</Link>
-            </li>
+      <ul className={click ? "nav-menu active" : "nav-menu"}>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
 
-            <li>
-                <Link to="/blog">Blog</Link>
-            </li>
-        </ul>
-        <div className = "hamburger" onClick =
-        {handleClick}>
-            {click ? (
-                <FaTimes size = {20} style = {{color: 
-                "#1F51FF"}} /> 
-                ) : ( 
-                <FaBars size = {20} style = {{color: 
-                "#1F51FF"}} />
-            )}
-        </div>
+        <li>
+          <Link to="/resume">Resume</Link>
+        </li>
+
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+      </ul>
+
+      <div className="hamburger" onClick={handleClick}>
+        {click ? (
+          <FaTimes size={20} style={{ color: "#1F51FF" }} />
+        ) : (
+          <FaBars size={20} style={{ color: "#1F51FF" }} />
+        )}
+      </div>
     </div>
   );
 };
 
-export default Navbar
-
-
-
-
-
-
-
-
+export default Navbar;

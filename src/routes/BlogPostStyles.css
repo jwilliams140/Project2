@@ -1,0 +1,30 @@
+.blog-detail {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.blog-detail h1 {
+    color: rgb(12, 95, 211);
+}
+
+.blog-detail p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.blog-detail a {
+    display: inline-block;
+    margin-top: 20px;
+    color: rgb(12, 95, 211);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.blog-detail a:hover {
+    background-color: rgb(12, 95, 211);
+    color: white;
+}

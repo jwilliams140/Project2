@@ -33,21 +33,22 @@
   margin: 5px;
   border-radius: 6px;
 }
-h1 {
+
+.about-container h1 {
   color: rgb(12, 95, 211);
 }
 
-h2 {
+.about-container h2 {
   color: rgb(12, 95, 211);
   margin-bottom: 10px;
 }
 
-h3 {
+.about-container h3 {
   color: #ffffff;
   margin-bottom: 8px;
 }
 
-p {
+.about-container p {
   color: rgb(12, 95, 211);
 }
 
