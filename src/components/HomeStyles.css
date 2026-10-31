@@ -1,51 +1,313 @@
-.home-container {
-  max-width: 900px;
-  margin: 80px auto;
-  text-align: center;
-  padding: 2rem;
+.home {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.home-hero {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* LEFT SIDE */
+
+.home-content {
+  max-width: 680px;
+}
+
+.home-eyebrow {
+  margin-bottom: 1rem;
+
+  color: #65b5ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.home-content h1 {
+  margin-bottom: 1rem;
+
+  color: #ffffff;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.home-content h2 {
+  margin-bottom: 1.5rem;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.home-content h2 span {
+  display: block;
+  margin-top: 0.25rem;
+
+  color: #65b5ff;
+  font-weight: 500;
+}
+
+.home-description {
+  max-width: 620px;
+  margin-bottom: 2rem;
+
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* BUTTONS */
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-bottom: 2.25rem;
+}
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 140px;
+  padding: 0.85rem 1.4rem;
+
+  border-radius: 8px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.home-btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary-btn {
+  color: #ffffff;
+  background: #1677ff;
+  border: 1px solid #4594ff;
+  box-shadow: 0 8px 25px rgba(22, 119, 255, 0.22);
+}
+
+.primary-btn:hover {
+  background: #2984ff;
+  box-shadow: 0 10px 30px rgba(22, 119, 255, 0.32);
+}
+
+.secondary-btn {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* SKILL LABELS */
+
+.home-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.home-skills span {
+  padding: 0.45rem 0.8rem;
+
+  color: rgba(255, 255, 255, 0.72);
+  background: rgba(5, 12, 30, 0.35);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+
+  font-size: 0.82rem;
+  font-weight: 500;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* CERTIFICATION */
+
+.certification-status {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  margin-top: 1.25rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  background: #65b5ff;
+  border-radius: 50%;
+
+  box-shadow: 0 0 12px rgba(101, 181, 255, 0.9);
+}
+
+.certification-status p {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+}
+
+.certification-status p span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* PROFILE */
+
+.home-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 500px;
+}
+
+.profile-glow {
+  position: absolute;
+
+  width: 340px;
+  height: 340px;
+
+  background: rgba(45, 140, 255, 0.25);
+  border-radius: 50%;
+
+  filter: blur(75px);
+}
+
+.profile-frame {
+  position: relative;
+  z-index: 1;
+
+  width: min(360px, 100%);
+  padding: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transform: rotate(2deg);
+  transition: transform 0.3s ease;
+}
+
+.profile-frame:hover {
+  transform: rotate(0deg) translateY(-4px);
 }
 
 .profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  margin-bottom: 20px;
+  display: block;
+
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  border-radius: 20px;
   object-fit: cover;
 }
 
-.home-container h1 {
-  font-size: 2.5rem;
-  color: rgb(12, 95, 211);
+/* TABLET */
+
+@media screen and (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    padding-top: 9rem;
+    text-align: center;
+  }
+
+  .home-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .home-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-actions,
+  .home-skills,
+  .certification-status {
+    justify-content: center;
+  }
+
+  .home-visual {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .profile-frame {
+    width: min(320px, 80%);
+  }
 }
 
-.home-container h2 {
-  color: rgb(12, 95, 211);
-  margin-bottom: 15px;
-}
+/* MOBILE */
 
-.home-container p {
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-  line-height: 1.6;
-  color: rgb(12, 95, 211);
-}
+@media screen and (max-width: 600px) {
+  .home-hero {
+    padding: 7.5rem 1.25rem 3rem;
+  }
 
-.cta-buttons {
-  margin-top: 20px;
-}
+  .home-content h1 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+  }
 
-.btn {
-  background-color: rgb(12, 95, 211);
-  color: white;
-  padding: 10px 18px;
-  border-radius: 6px;
-  border: 1px solid rgb(255, 255, 255);
-  margin: 0 10px;
-  text-decoration: none;
-}
+  .home-content h2 {
+    font-size: 1.3rem;
+  }
 
-.btn-light {
-  background-color: rgb(12, 95, 211);
-  border: 1px solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
+  .home-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .home-actions {
+    flex-direction: column;
+  }
+
+  .home-btn {
+    width: 100%;
+  }
+
+  .profile-frame {
+    width: min(290px, 90%);
+  }
 }

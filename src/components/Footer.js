@@ -1,57 +1,74 @@
 import "./FooterStyles.css";
 import React from "react";
-import { FaSchool, FaPhone, FaMailBulk, FaLinkedin, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
-  return (
-    <div className = "footer">
-        <div className = "footer-container">
-            <div className = "left">
-                <div className = "location">
-                    <FaSchool size = {20} style = {{ color:
-                    "#fff", marginRight: "2rem" }} />
-                    <div>
-                        <p> CSUB Antelope Valley </p>
-                        <p> 43909 30th Street West</p>
-                    </div>
-                </div>
-                <div className = "phone"> 
-                    <h4> <FaPhone size = {20} style = {{ color:
-                    "#fff", marginRight: "2rem" }} />
-                    (661) 952-5000 
-                    </h4>
-                </div>
-                <div className = "email"> 
-                    <h4> 
-                    <FaMailBulk size = {20} style = {{ color:
-                    "#fff", marginRight: "2rem" }} 
-                    />
-                    jwilliams140@csub.edu 
-                    </h4>
-                </div>
-            </div>
-            <div className = "right">
-            <h4> About Me </h4>
-            <p> 
-                Hello, My name is Joshua Williams. A Computer Science student who enjoys learning and acquiring 
-                hardware skills in troubleshooting, IoT, and assembly language 
-            </p>
-            <div className = "social"> 
-                    <FaLinkedin 
-                    size = {20} 
-                    style = {{ color: "#fff", marginRight: 
-                        "2rem" }} 
-                    />
-                    <FaGithub 
-                    size = {20} 
-                    style = {{ color: "#fff", marginRight: 
-                        "2rem" }} 
-                    />
-                    </div>
-            </div>
-        </div>
-    </div>
-  )
-}
+  const currentYear = new Date().getFullYear();
 
-export default Footer
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-main">
+          <div className="footer-brand">
+            <Link to="/" className="footer-logo">
+              JW
+            </Link>
+
+            <h2>Joshua Williams</h2>
+
+            <p>
+              Computer Science student building toward a career in information
+              technology.
+            </p>
+          </div>
+
+          <div className="footer-navigation">
+            <h3>Explore</h3>
+
+            <div className="footer-links">
+              <Link to="/about">About</Link>
+              <Link to="/resume">Resume</Link>
+              <Link to="/portfolio">Portfolio</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/contact">Contact</Link>
+            </div>
+          </div>
+
+          <div className="footer-connect">
+            <h3>Connect</h3>
+
+            <p>Interested in connecting? Find me online.</p>
+
+            <div className="footer-socials">
+              <a
+                href="https://www.linkedin.com/in/joshuajosephwilliams1/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+
+              <a
+                href="https://github.com/jwilliams140"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© {currentYear} Joshua Williams</p>
+          <p>Built with React</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

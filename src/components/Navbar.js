@@ -1,60 +1,80 @@
 import "./NavbarStyles.css";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const [color, setColor] = useState(false);
-
-  const handleClick = () => {
-    setClick(!click);
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const changeColor = () => {
-      if (window.scrollY >= 100) {
-        setColor(true);
-      } else {
-        setColor(false);
-      }
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", changeColor);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", changeColor);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <div className={color ? "header header-bg" : "header"}>
-      <Link to="/">
-        <h1>JW</h1>
-      </Link>
+    <header className={scrolled ? "header header-scrolled" : "header"}>
+      <nav className="navbar">
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
+          JW
+        </Link>
 
-      <ul className={click ? "nav-menu active" : "nav-menu"}>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
+        <ul className={menuOpen ? "nav-menu active" : "nav-menu"}>
+          <li>
+            <NavLink to="/about" onClick={closeMenu}>
+              About
+            </NavLink>
+          </li>
 
-        <li>
-          <Link to="/resume">Resume</Link>
-        </li>
+          <li>
+            <NavLink to="/resume" onClick={closeMenu}>
+              Resume
+            </NavLink>
+          </li>
 
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-      </ul>
+          <li>
+            <NavLink to="/portfolio" onClick={closeMenu}>
+              Portfolio
+            </NavLink>
+          </li>
 
-      <div className="hamburger" onClick={handleClick}>
-        {click ? (
-          <FaTimes size={20} style={{ color: "#1F51FF" }} />
-        ) : (
-          <FaBars size={20} style={{ color: "#1F51FF" }} />
-        )}
-      </div>
-    </div>
+          <li>
+            <NavLink to="/blog" onClick={closeMenu}>
+              Blog
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/contact"
+              className="contact-link"
+              onClick={closeMenu}
+            >
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </nav>
+    </header>
   );
 };
 

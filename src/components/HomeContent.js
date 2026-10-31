@@ -1,29 +1,67 @@
+import "./HomeStyles.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import "./HomeStyles.css";
-import profile from "../assets/Profile.jpg";
+import profileImg from "../assets/Profile.jpg";
 
 const HomeContent = () => {
   return (
-    <div className="home-container">
+    <main className="home">
+      <section className="home-hero">
+        <div className="home-content">
+          <p className="home-eyebrow">HELLO, I'M</p>
 
-      <img src={profile} alt="Profile" className="profile-img" />
+          <h1>Joshua Williams</h1>
 
-      <h1>Joshua Williams</h1>
+          <h2>
+            Computer Science Student
+            <span>Aspiring IT Professional</span>
+          </h2>
 
-      <h2>Student</h2>
+          <p className="home-description">
+            I'm a Computer Science student building hands-on skills in IT
+            support, computer hardware, operating systems, and networking as I
+            prepare for a career in information technology.
+          </p>
 
-      <p>
-        Welcome to my portfolio! Use the above links to access my about, resume, and blog pages.
-        If you would like to view my portfolio or contact me, click the portfolio or contact button.
-      </p>
+          <div className="home-actions">
+            <Link to="/resume" className="home-btn primary-btn">
+              View Resume
+            </Link>
 
-      <div className="cta-buttons">
-        <Link to="/portfolio" className="btn">Portfolio</Link>
-        <Link to="/contact" className="btn btn-light">Contact</Link>
-      </div>
+            <Link to="/contact" className="home-btn secondary-btn">
+              Contact Me
+            </Link>
+          </div>
 
-    </div>
+          <div className="home-skills">
+            <span>Windows</span>
+            <span>Linux</span>
+            <span>Hardware</span>
+            <span>Networking</span>
+          </div>
+
+          <div className="certification-status">
+            <span className="status-dot"></span>
+
+            <p>
+              CompTIA A+ <span>In Progress</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="home-visual">
+          <div className="profile-glow"></div>
+
+          <div className="profile-frame">
+            <img
+              src={profileImg}
+              alt="Joshua Williams"
+              className="profile-img"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 };
 
