@@ -1,74 +1,217 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Banner from "../components/Banner";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import "../components/ContactStyles.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("idle");
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormData((previousData) => ({
+      ...previousData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setStatus("sending");
+    setStatusMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Unable to send message.");
+      }
+
+      setStatus("success");
+      setStatusMessage(
+        "Your message was sent successfully. I'll get back to you as soon as I can."
+      );
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      setStatus("error");
+      setStatusMessage(
+        "Your message could not be sent. Please try again later."
+      );
+    }
+  };
+
   return (
-    <div>
+    <>
       <Navbar />
 
-      <Banner heading="CONTACT" />
+      <main className="contact-page">
+        <section className="contact-hero">
+          <div className="contact-hero-content">
+            <p className="contact-eyebrow">CONTACT</p>
 
-      <div className="contact-container">
+            <h1>
+              Let's start a
+              <span> conversation.</span>
+            </h1>
 
-        <h2>Contact Me</h2>
+            <p className="contact-intro">
+              Whether you'd like to discuss an opportunity, ask a question, or
+              simply connect, feel free to send me a message.
+            </p>
+          </div>
+        </section>
 
-        <p>
-          If you would like to contact me through this page, just fill out your information and submit this contact form.
-          If you prefer a different alternative, connect with me on LinkedIn and GitHub.
-        </p>
+        <section className="contact-content">
+          <div className="contact-info">
+            <p className="contact-section-label">GET IN TOUCH</p>
 
-        <div className="social-links">
-          <a
-            href="https://www.linkedin.com/in/joshuajosephwilliams1/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+            <h2>I'd be happy to hear from you.</h2>
 
-          <a
-            href="https://github.com/jwilliams140"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        </div>
+            <p className="contact-info-text">
+              I'm currently a Computer Science student building toward a career
+              in information technology and developing my skills through
+              education, technical training, and hands-on learning.
+            </p>
 
+            <div className="contact-connect">
+              <p>Connect with me</p>
 
-        <form className="contact-form">
+              <div className="contact-socials">
+                <a
+                  href="https://www.linkedin.com/in/joshuajosephwilliams1/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedinIn />
+                  <span>LinkedIn</span>
+                </a>
 
-          <input
-            type="text"
-            placeholder="Name"
-            required
-          />
+                <a
+                  href="https://github.com/jwilliams140"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                >
+                  <FaGithub />
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
-          <input
-            type="email"
-            placeholder="Email"
-            required
-          />
+          <div className="contact-form-container">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
 
-          <textarea
-            placeholder="Message"
-            rows="5"
-            required
-          ></textarea>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    autoComplete="name"
+                    required
+                  />
+                </div>
 
-          <button type="submit">
-            Submit
-          </button>
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
 
-        </form>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="you@example.com"
+                    autoComplete="email"
+                    required
+                  />
+                </div>
+              </div>
 
-      </div>
+              <div className="form-group">
+                <label htmlFor="subject">Subject</label>
+
+                <input
+                  id="subject"
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="What would you like to discuss?"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Write your message here..."
+                  rows="7"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="contact-submit"
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "Sending..." : "Send Message"}
+                <span>→</span>
+              </button>
+
+              {statusMessage && (
+                <div
+                  className={`form-status ${
+                    status === "success" ? "success" : "error"
+                  }`}
+                  role="status"
+                >
+                  {statusMessage}
+                </div>
+              )}
+            </form>
+          </div>
+        </section>
+      </main>
 
       <Footer />
-    </div>
+    </>
   );
 };
 
