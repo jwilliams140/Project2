@@ -1,76 +1,151 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Banner from "../components/Banner";
+import profileImg from "../assets/Profile.jpg";
 import "../components/AboutStyles.css";
-import profile from "../assets/Profile.jpg"
-import resume from "../assets/resume.pdf";
 
 const About = () => {
   return (
-    <div>
+    <>
       <Navbar />
 
-      <Banner heading="ABOUT" />
+      <main className="about-page">
+        <section className="about-hero">
+          <div className="about-hero-content">
+            <p className="about-eyebrow">ABOUT ME</p>
 
-      <div className="about-container">
+            <h1>
+              Building a foundation for a career in
+              <span> information technology.</span>
+            </h1>
 
-        <img src={profile} alt="Profile" className="about-image" />
-
-        <h1>Joshua Williams</h1>
-
-        <p className="about-description">
-            Since high school I have taken the necessary steps to acquire skills through computer science.
-            My experience first started with computer troubleshooting during my junior and senior year in high school.
-            In college, I first majored in computer networking but I felt the program wasn't set up to help students
-            succeed learning computer hardware. I switched to being a computer engineering student and started to 
-            learn what I've mostly been doing the last few years. Now as a computer science, I am more confident in
-            my ability to showcase my experience through this portfolio.
-        </p>
-
-        <p>
-          <strong>Years of Experience:</strong> 2+ years deveoping projects using coding and web development tools.
-        </p>
-        <br />
-
-        <section>
-          <h2>Specializations</h2>
-          <ul>
-            <li>IT Support Specialist</li>
-            <li>Software Engineer</li>
-            <li>Front-End Developer</li>
-            <li>Embedded Software Engineer</li>
-          </ul>
+            <p className="about-intro">
+              I'm Joshua Williams, a Computer Science student developing
+              practical skills in IT support, computer hardware, operating
+              systems, and networking.
+            </p>
+          </div>
         </section>
-        <br />
 
-        <section>
-          <h2>Skills</h2>
-          <ul>
-            <li>Computer Troubleshooting</li>
-            <li>Java</li>
-            <li>React</li>
-            <li>GitHub</li>
-            <li>Assembly Language</li>
-            <li>IoT</li>
-            <li>Python</li>
-            <li>MIPS</li>
-          </ul>
+        <section className="about-story">
+          <div className="about-photo-column">
+            <div className="about-photo-frame">
+              <img src={profileImg} alt="Joshua Williams" />
+            </div>
+
+            <div className="about-status-card">
+              <span className="about-status-dot"></span>
+
+              <div>
+                <p>Currently pursuing</p>
+                <strong>CompTIA A+ Certification</strong>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-story-content">
+            <p className="section-label">MY PATH</p>
+
+            <h2>From an interest in computers to a future in IT.</h2>
+
+            <p>
+              My interest in technology began with learning about computer
+              hardware, operating systems, networking, and troubleshooting
+              through specialized technical training in high school. Those
+              experiences gave me an early opportunity to work through
+              practical computer problems and understand how different parts
+              of a system work together.
+            </p>
+
+            <p>
+              I continued developing that foundation through college coursework
+              in computer networking (multi-platform) before pursuing my
+              bachelor's degree in Computer Science at California State
+              University, Bakersfield.
+            </p>
+
+            <p>
+              As I continue my education, my goal is to build the technical
+              knowledge and hands-on experience needed for a career in
+              information technology. I'm especially interested in
+              troubleshooting, supporting users, maintaining computer systems,
+              and continuing to strengthen my understanding of hardware,
+              operating systems, and networks.
+            </p>
+
+            <div className="about-actions">
+              <Link to="/resume" className="about-btn primary">
+                View Resume
+              </Link>
+
+              <Link to="/contact" className="about-btn secondary">
+                Contact Me
+              </Link>
+            </div>
+          </div>
         </section>
-        <br />
 
-        <a
-          href={resume}
-          download
-          className="resume-download"
-        >
-          Download Resume
-        </a>
+        <section className="about-foundation">
+          <div className="about-section-heading">
+            <p className="section-label">TECHNICAL FOUNDATION</p>
+            <h2>What I'm building experience with</h2>
+            <p>
+              My education and technical training have given me exposure to
+              several areas that support my goal of working in IT.
+            </p>
+          </div>
 
-      </div>
+          <div className="foundation-grid">
+            <article className="foundation-card">
+              <span className="card-number">01</span>
+              <h3>Operating Systems</h3>
+              <p>
+                Working with Windows 10/11 and Linux, including file
+                management, command-line tools, permissions, and basic system
+                configuration.
+              </p>
+            </article>
+
+            <article className="foundation-card">
+              <span className="card-number">02</span>
+              <h3>Hardware & Troubleshooting</h3>
+              <p>
+                Experience with desktop hardware, RAM and storage upgrades,
+                peripherals, system maintenance, and basic PC troubleshooting.
+              </p>
+            </article>
+
+            <article className="foundation-card">
+              <span className="card-number">03</span>
+              <h3>Networking</h3>
+              <p>
+                Building knowledge of TCP/IP, IPv4 addressing, LAN
+                configuration, and wired and wireless networking fundamentals.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="about-next">
+          <p className="section-label">LOOKING AHEAD</p>
+
+          <h2>Still learning. Still building.</h2>
+
+          <p>
+            I'm continuing to develop my technical abilities while completing
+            my Computer Science degree and preparing for opportunities where I
+            can apply what I've learned in a professional IT environment.
+          </p>
+
+          <Link to="/contact" className="about-text-link">
+            Let's connect <span>→</span>
+          </Link>
+        </section>
+      </main>
 
       <Footer />
-    </div>
+    </>
   );
 };
 
