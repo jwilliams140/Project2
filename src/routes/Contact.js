@@ -24,45 +24,47 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+const handleSubmit = async (event) => {
+  event.preventDefault();
 
-    setStatus("sending");
-    setStatusMessage("");
+  setStatus("sending");
+  setStatusMessage("");
 
-    try {
-      const response = await fetch("/api/contact", {
+  try {
+    const response = await fetch(
+      "https://formsubmit.app/f/j5x8v4cx5f",
+      {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Unable to send message.");
       }
+    );
 
-      setStatus("success");
-      setStatusMessage(
-        "Your message was sent successfully. I'll get back to you as soon as I can."
-      );
-
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      setStatus("error");
-      setStatusMessage(
-        "Your message could not be sent. Please try again later."
-      );
+    if (!response.ok) {
+      throw new Error("Unable to send message.");
     }
-  };
+
+    setStatus("success");
+    setStatusMessage(
+      "Your message was sent successfully. I'll get back to you as soon as I can."
+    );
+
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  } catch (error) {
+    setStatus("error");
+    setStatusMessage(
+      "Your message could not be sent. Please try again later."
+    );
+  }
+};
 
   return (
     <>
